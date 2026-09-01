@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>شركة آفاق للأعمال | حلول واستشارات رقمية متكاملة</title>
+
+  <!-- Google Fonts: Cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Cairo', 'sans-serif'],
+          },
+          colors: {
+            corporate: {
+              50: '#f0f7ff',
+              100: '#e0effe',
+              500: '#0284c7',
+              600: '#0369a1',
+              700: '#075985',
+              800: '#0c4a6e',
+              900: '#082f49',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body class="font-sans text-slate-700 bg-white antialiased selection:bg-corporate-600 selection:text-white">
+
+  <!-- Top Bar -->
+  <div class="bg-slate-900 text-slate-300 text-xs py-2.5 px-6 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div class="flex items-center gap-6">
+        <span class="flex items-center gap-2"><i class="fa-solid fa-phone text-corporate-500"></i> +966 50 123 4567</span>
+        <span class="flex items-center gap-2"><i class="fa-solid fa-envelope text-corporate-500"></i> info@company-domain.com</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <span>ساعات العمل: الأحد - الخميس 8:00 ص - 5:00 م</span>
+        <div class="h-3 w-px bg-slate-700 hidden sm:block"></div>
+        <div class="flex items-center gap-3">
+          <a href="#" class="hover:text-white transition"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" class="hover:text-white transition"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" class="hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-11 h-11 bg-gradient-to-tr from-corporate-800 to-corporate-600 rounded-xl flex items-center justify-center text-white text-xl shadow-md">
+          <i class="fa-solid fa-layer-group"></i>
+        </div>
+        <div>
+          <span class="text-xl font-extrabold text-slate-900 block leading-tight">شركة آفاق</span>
+          <span class="text-[11px] font-semibold text-corporate-600 uppercase tracking-wider block">حلول الأعمال والتقنية</span>
+        </div>
+      </a>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-bold text-slate-600">
+        <a href="#home" class="text-corporate-600 transition">الرئيسية</a>
+        <a href="#about" class="hover:text-corporate-600 transition">عن الشركة</a>
+        <a href="#services" class="hover:text-corporate-600 transition">خدماتنا</a>
+        <a href="#projects" class="hover:text-corporate-600 transition">مشاريعنا</a>
+        <a href="#why-us" class="hover:text-corporate-600 transition">لماذا نحن</a>
+        <a href="#testimonials" class="hover:text-corporate-600 transition">عملاؤنا</a>
+        <a href="#contact" class="hover:text-corporate-600 transition">تواصل معنا</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-3">
+        <button onclick="toggleLanguage()" class="text-xs font-bold px-3 py-2 border border-slate-300 rounded-lg hover:bg-slate-50 transition flex items-center gap-1.5">
+          <i class="fa-solid fa-globe text-corporate-600"></i> EN / AR
+        </button>
+        <a href="#contact" class="hidden sm:inline-flex bg-corporate-600 hover:bg-corporate-700 text-white text-sm font-bold px-5 py-2.5 rounded-lg shadow transition">
+          طلب استشارة
+        </a>
+        <button id="mobileMenuBtn" class="lg:hidden p-2 text-slate-700 hover:text-corporate-600 text-xl">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-200 bg-white px-6 py-4 space-y-3 font-semibold text-slate-700">
+      <a href="#home" class="block hover:text-corporate-600 py-1">الرئيسية</a>
+      <a href="#about" class="block hover:text-corporate-600 py-1">عن الشركة</a>
+      <a href="#services" class="block hover:text-corporate-600 py-1">خدماتنا</a>
+      <a href="#projects" class="block hover:text-corporate-600 py-1">مشاريعنا</a>
+      <a href="#why-us" class="block hover:text-corporate-600 py-1">لماذا نحن</a>
+      <a href="#testimonials" class="block hover:text-corporate-600 py-1">عملاؤنا</a>
+      <a href="#contact" class="block hover:text-corporate-600 py-1">تواصل معنا</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative bg-gradient-to-b from-slate-900 via-corporate-900 to-slate-900 text-white py-24 lg:py-32 overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:24px_24px]"></div>
+    
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-corporate-500/20 text-corporate-200 border border-corporate-400/30 text-xs font-bold mb-6">
+            <i class="fa-solid fa-shield-check text-corporate-400"></i> الشريك الموثوق للنمو والتطوير
+          </div>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight mb-6">
+            شريكك الاستراتيجي في <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-300">التحول الرقمي</span> وبناء النجاح
+          </h1>
+          <p class="text-lg text-slate-300 mb-8 leading-relaxed">
+            نقدم استشارات مهنية وحلول تقنية مبتكرة مصممة خصيصاً لمساعدة الشركات والمؤسسات على تحسين كفاءتها التشغيلية ومضاعفة نموها في السوق التنافسي.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#contact" class="bg-corporate-500 hover:bg-corporate-600 text-white text-center font-bold px-8 py-4 rounded-xl shadow-lg transition">
+              احجز جلستك الاستشارية
+            </a>
+            <a href="#services" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 text-center font-bold px-8 py-4 rounded-xl transition">
+              استكشف خدماتنا
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Stats Box -->
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/10">
+            <div class="text-3xl sm:text-4xl font-extrabold text-sky-400 mb-2">+12</div>
+            <div class="text-sm font-bold text-white mb-1">عاماً من الخبرة</div>
+            <p class="text-xs text-slate-300">في تقديم الحلول والاستشارات لقطاعات الأعمال المختلفة</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/10">
+            <div class="text-3xl sm:text-4xl font-extrabold text-sky-400 mb-2">+350</div>
+            <div class="text-sm font-bold text-white mb-1">مشروع منجز</div>
+            <p class="text-xs text-slate-300">تم تسليمها بأعلى معايير الجودة والموثوقية</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/10">
+            <div class="text-3xl sm:text-4xl font-extrabold text-sky-400 mb-2">98%</div>
+            <div class="text-sm font-bold text-white mb-1">نسبة رضا العملاء</div>
+            <p class="text-xs text-slate-300">علاقات عمل مستدامة وشراكات استراتيجية طويلة الأمد</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/10">
+            <div class="text-3xl sm:text-4xl font-extrabold text-sky-400 mb-2">+50</div>
+            <div class="text-sm font-bold text-white mb-1">مستشار وخبير</div>
+            <p class="text-xs text-slate-300">فريق متكامل ومتخصص في شتى المجالات الإدارية والتقنية</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-24 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="relative">
+          <div class="aspect-video sm:aspect-square bg-slate-200 rounded-3xl overflow-hidden shadow-xl border-4 border-white flex items-center justify-center bg-gradient-to-tr from-slate-800 to-corporate-800 text-white p-8 text-center">
+            <div>
+              <i class="fa-solid fa-building-circle-check text-6xl text-sky-400 mb-4"></i>
+              <h3 class="text-2xl font-bold mb-2">الريادة والتميز المؤسسي</h3>
+              <p class="text-slate-300 text-sm max-w-sm mx-auto">ملتزمون بتقديم أعلى مستويات الاحترافية والابتكار لدعم شركائنا في تحقيق أهدافهم.</p>
+            </div>
+          </div>
+          <div class="absolute -bottom-6 start-6 bg-white p-5 rounded-2xl shadow-xl border border-slate-100 hidden sm:flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-corporate-100 text-corporate-600 flex items-center justify-center text-2xl font-bold">
+              <i class="fa-solid fa-award"></i>
+            </div>
+            <div>
+              <div class="font-bold text-slate-900">شهادات جودة عالمية</div>
+              <div class="text-xs text-slate-500">معايير عمل معتمدة وموثوقة</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="text-corporate-600 text-sm font-extrabold uppercase tracking-wider mb-2">عن شركتنا</div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight mb-6">
+            نبني حلولاً ذكية تمكن مؤسستك من التطور والريادة
+          </h2>
+          <p class="text-slate-600 leading-relaxed mb-6">
+            انطلقنا برؤية طموحة لتمكين المنشآت والشركات من مواكبة التغيرات المتسارعة، وتجاوز التحديات التشغيلية عبر حلول واستراتيجيات مدروسة تجمع بين الخبرة والابتكار.
+          </p>
+          <div class="space-y-4 mb-8">
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-corporate-100 text-corporate-600 flex items-center justify-center text-sm mt-1 shrink-0">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <div>
+                <strong class="text-slate-900 block">فهم عميق لاحتياجات السوق:</strong>
+                <span class="text-slate-600 text-sm">دراسة دقيقة لكل حالة لتقديم توصيات واقعية قابلة للتنفيذ.</span>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-corporate-100 text-corporate-600 flex items-center justify-center text-sm mt-1 shrink-0">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <div>
+                <strong class="text-slate-900 block">منهجية عمل مرنة ومتطورة:</strong>
+                <span class="text-slate-600 text-sm">تطبيق أحدث الأطر والممارسات العالمية لضمان سرعة الإنجاز وجودة المخرجات.</span>
+              </div>
+            </div>
+          </div>
+          <a href="#services" class="inline-flex items-center gap-2 font-bold text-corporate-600 hover:text-corporate-700 transition">
+            تعرف أكثر على خدماتنا <i class="fa-solid fa-arrow-left text-xs"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="text-corporate-600 text-sm font-extrabold uppercase tracking-wider mb-2">مجالات تخصصنا</div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">خدمات وحلول مصممة لنموك</h2>
+        <p class="text-slate-600 text-lg">باقة متكاملة من الخدمات الاستشارية والتقنية لتغطية مختلف احتياجات أعمالك.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="p-8 rounded-2xl bg-white border border-slate-200 hover:border-corporate-500 hover:shadow-xl transition duration-300 group">
+          <div class="w-14 h-14 bg-corporate-50 group-hover:bg-corporate-600 text-corporate-600 group-hover:text-white rounded-xl flex items-center justify-center text-2xl mb-6 transition duration-300">
+            <i class="fa-solid fa-chess-knight"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">الاستشارات الاستراتيجية</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">تطوير الخطط التنموية وإعادة هيكلة العمليات لتحقيق أعلى كفاءة تنظيمية وإنتاجية.</p>
+          <a href="#contact" class="text-corporate-600 font-bold text-sm inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+            طلب تفاصيل الخدمة <i class="fa-solid fa-chevron-left text-xs"></i>
+          </a>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="p-8 rounded-2xl bg-white border border-slate-200 hover:border-corporate-500 hover:shadow-xl transition duration-300 group">
+          <div class="w-14 h-14 bg-corporate-50 group-hover:bg-corporate-600 text-corporate-600 group-hover:text-white rounded-xl flex items-center justify-center text-2xl mb-6 transition duration-300">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">التحول الرقمي وتطوير الأنظمة</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">بناء وتطوير المنصات والتطبيقات والأنظمة الإدارية المخصصة لتسهيل العمليات.</p>
+          <a href="#contact" class="text-corporate-600 font-bold text-sm inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+            طلب تفاصيل الخدمة <i class="fa-solid fa-chevron-left text-xs"></i>
+          </a>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="p-8 rounded-2xl bg-white border border-slate-200 hover:border-corporate-500 hover:shadow-xl transition duration-300 group">
+          <div class="w-14 h-14 bg-corporate-50 group-hover:bg-corporate-600 text-corporate-600 group-hover:text-white rounded-xl flex items-center justify-center text-2xl mb-6 transition duration-300">
+            <i class="fa-solid fa-bullhorn"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">التسويق الرقمي وبناء العلامة</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">خطط تسويقية مبنية على تحليل البيانات لتعزيز ظهور علامتك التجارية وجذب العملاء المؤهلين.</p>
+          <a href="#contact" class="text-corporate-600 font-bold text-sm inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+            طلب تفاصيل الخدمة <i class="fa-solid fa-chevron-left text-xs"></i>
+          </a>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="p-8 rounded-2xl bg-white border border-slate-200 hover:border-corporate-500 hover:shadow-xl transition duration-300 group">
+          <div class="w-14 h-14 bg-corporate-50 group-hover:bg-corporate-600 text-corporate-600 group-hover:text-white rounded-xl flex items-center justify-center text-2xl mb-6 transition duration-300">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">الحلول السحابية والأمن</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">ترحيل البنية التحتية إلى السحابة وحماية أصولك الرقمية بأعلى معايير الأمان السيبراني.</p>
+          <a href="#contact" class="text-corporate-600 font-bold text-sm inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+            طلب تفاصيل الخدمة <i class="fa-solid fa-chevron-left text-xs"></i>
+          </a>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="p-8 rounded-2xl bg-white border border-slate-200 hover:border-corporate-500 hover:shadow-xl transition duration-300 group">
+          <div class="w-14 h-14 bg-corporate-50 group-hover:bg-corporate-600 text-corporate-600 group-hover:text-white rounded-xl flex items-center justify-center text-2xl mb-6 transition duration-300">
+            <i class="fa-solid fa-file-invoice-dollar"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">الاستشارات المالية والتدقيق</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">تحليل التدفقات النقدية، إدارة المخاطر، وإعداد الموازنات لضمان الاستقرار المالي.</p>
+          <a href="#contact" class="text-corporate-600 font-bold text-sm inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+            طلب تفاصيل الخدمة <i class="fa-solid fa-chevron-left text-xs"></i>
+          </a>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="p-8 rounded-2xl bg-white border border-slate-200 hover:border-corporate-500 hover:shadow-xl transition duration-300 group">
+          <div class="w-14 h-14 bg-corporate-50 group-hover:bg-corporate-600 text-corporate-600 group-hover:text-white rounded-xl flex items-center justify-center text-2xl mb-6 transition duration-300">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">الدعم الفني والتشغيلي المدار</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4">خدمات مساندة مستمرة لضمان استمرارية أعمالك وأنظمتك دون أي انقطاع.</p>
+          <a href="#contact" class="text-corporate-600 font-bold text-sm inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+            طلب تفاصيل الخدمة <i class="fa-solid fa-chevron-left text-xs"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Showcase -->
+  <section id="projects" class="py-24 bg-slate-900 text-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <div class="text-sky-400 text-sm font-extrabold uppercase tracking-wider mb-2">سجل الإنجازات</div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white">مشاريع نفخر بتنفيذها</h2>
+        </div>
+        <p class="text-slate-400 max-w-md text-sm">نماذج واقعية لكيفية مساهمتنا في مساعدة عملائنا على تحقيق أهدافهم الاستراتيجية بنجاح.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Project 1 -->
+        <div class="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 hover:border-sky-400 transition group">
+          <div class="h-48 bg-slate-700 flex items-center justify-center text-slate-500 group-hover:text-sky-400 transition text-5xl">
+            <i class="fa-solid fa-network-wired"></i>
+          </div>
+          <div class="p-6">
+            <span class="text-xs font-bold text-sky-400 uppercase tracking-wider block mb-2">قطاع التجزئة</span>
+            <h4 class="text-lg font-bold text-white mb-2">تطوير منصة سلاسل الإمداد المتكاملة</h4>
+            <p class="text-slate-400 text-xs leading-relaxed mb-4">أتمتة حركة المخزون وخفض تكاليف التشغيل بنسبة 35% لشركة تجزئة رائدة.</p>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 hover:border-sky-400 transition group">
+          <div class="h-48 bg-slate-700 flex items-center justify-center text-slate-500 group-hover:text-sky-400 transition text-5xl">
+            <i class="fa-solid fa-hospital-user"></i>
+          </div>
+          <div class="p-6">
+            <span class="text-xs font-bold text-sky-400 uppercase tracking-wider block mb-2">الرعاية الصحية</span>
+            <h4 class="text-lg font-bold text-white mb-2">نظام إدارة العيادات والمواعيد الذكي</h4>
+            <p class="text-slate-400 text-xs leading-relaxed mb-4">تحسين تجربة أكثر من 50,000 مريض سنوياً وتقليل وقت الانتظار.</p>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 hover:border-sky-400 transition group">
+          <div class="h-48 bg-slate-700 flex items-center justify-center text-slate-500 group-hover:text-sky-400 transition text-5xl">
+            <i class="fa-solid fa-chart-pie"></i>
+          </div>
+          <div class="p-6">
+            <span class="text-xs font-bold text-sky-400 uppercase tracking-wider block mb-2">القطاع المالي</span>
+            <h4 class="text-lg font-bold text-white mb-2">إعادة هيكلة السياسات الاستثمارية</h4>
+            <p class="text-slate-400 text-xs leading-relaxed mb-4">وضع خطة استثمارية شاملة رفعت العائد السنوي بنسبة 22% لمحفظة استثمارية.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-24 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="text-corporate-600 text-sm font-extrabold uppercase tracking-wider mb-2">شهادات نعتز بها</div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">ماذا يقول شركاؤنا عن تجربتهم؟</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="text-amber-400 text-sm mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">"فريق عمل استثنائي وملتزم بأدق التفاصيل. ساعدونا في إعادة هيكلة عملياتنا التقنية في وقت قياسي."</p>
+          </div>
+          <div class="flex items-center gap-3 border-t border-slate-100 pt-4">
+            <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-700">م.ع</div>
+            <div>
+              <div class="text-sm font-bold text-slate-900">محمد العتيبي</div>
+              <div class="text-xs text-slate-500">الرئيس التنفيذي - شركة التقدم</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="text-amber-400 text-sm mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">"الدقة والاحترافية التي لمسناها مع شركة آفاق جعلتهم خيارنا الدائم في كل مشاريعنا الاستشارية."</p>
+          </div>
+          <div class="flex items-center gap-3 border-t border-slate-100 pt-4">
+            <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-700">س.ح</div>
+            <div>
+              <div class="text-sm font-bold text-slate-900">سارة الحربي</div>
+              <div class="text-xs text-slate-500">مديرة العمليات - مدار القابضة</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="text-amber-400 text-sm mb-4">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">"الخبرة العملية والحلول الواقعية وفرت علينا الكثير من الوقت والجهد والتكاليف الزائدة."</p>
+          </div>
+          <div class="flex items-center gap-3 border-t border-slate-100 pt-4">
+            <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-700">خ.ش</div>
+            <div>
+              <div class="text-sm font-bold text-slate-900">خالد الشمري</div>
+              <div class="text-xs text-slate-500">مؤسس ومدير عام - نماء الدولية</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-12">
+        <div>
+          <div class="text-corporate-600 text-sm font-extrabold uppercase tracking-wider mb-2">تواصل معنا</div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4">دعنا نناقش كيف يمكننا مساعدتك في تحقيق أهدافك</h2>
+          <p class="text-slate-600 mb-8 leading-relaxed">املأ النموذج وسيقوم أحد مستشارينا بالتواصل معك خلال 24 ساعة لترتيب جلسة عمل مبدئية.</p>
+
+          <div class="space-y-6">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-corporate-50 text-corporate-600 flex items-center justify-center text-xl shrink-0">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <div class="text-sm font-bold text-slate-900">المقر الرئيسي</div>
+                <div class="text-xs text-slate-500">طريق الملك فهد، حي الصحافة، الرياض، المملكة العربية السعودية</div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-corporate-50 text-corporate-600 flex items-center justify-center text-xl shrink-0">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div>
+                <div class="text-sm font-bold text-slate-900">الهاتف المباشر</div>
+                <div class="text-xs text-slate-500" dir="ltr">+966 11 234 5678</div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-corporate-50 text-corporate-600 flex items-center justify-center text-xl shrink-0">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <div class="text-sm font-bold text-slate-900">البريد الإلكتروني</div>
+                <div class="text-xs text-slate-500">contact@afaq-business.com</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="bg-slate-50 p-8 sm:p-10 rounded-3xl border border-slate-200">
+          <form onsubmit="event.preventDefault(); alert('شكراً لتواصلك، سنرد عليك قريباً!');" class="space-y-4">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-2">الاسم الكامل</label>
+              <input type="text" required placeholder="مثال: عبد الله بن محمد" class="w-full px-4 py-3 bg-white border border-slate-300 rounded-xl text-sm focus:outline-none focus:border-corporate-600">
+            </div>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-2">البريد الإلكتروني</label>
+                <input type="email" required placeholder="name@company.com" class="w-full px-4 py-3 bg-white border border-slate-300 rounded-xl text-sm focus:outline-none focus:border-corporate-600">
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-2">رقم الجوال</label>
+                <input type="tel" required placeholder="05xxxxxxxx" class="w-full px-4 py-3 bg-white border border-slate-300 rounded-xl text-sm focus:outline-none focus:border-corporate-600">
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-2">نوع الخدمة المطلوبة</label>
+              <select class="w-full px-4 py-3 bg-white border border-slate-300 rounded-xl text-sm focus:outline-none focus:border-corporate-600 text-slate-600">
+                <option>الاستشارات الاستراتيجية</option>
+                <option>التحول الرقمي والبرمجيات</option>
+                <option>التسويق وتطوير العلامة</option>
+                <option>الحلول السحابية والأمن</option>
+                <option>أخرى</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-2">تفاصيل الاستفسار أو المشروع</label>
+              <textarea rows="4" placeholder="اكتب نبذة مختصرة عن متطلباتك..." class="w-full px-4 py-3 bg-white border border-slate-300 rounded-xl text-sm focus:outline-none focus:border-corporate-600"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-corporate-600 hover:bg-corporate-700 text-white font-bold py-3.5 rounded-xl shadow-md transition">
+              إرسال طلب الاستشارة
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-400 pt-16 pb-8 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-9 h-9 bg-corporate-600 rounded-lg flex items-center justify-center text-white font-bold">
+              <i class="fa-solid fa-layer-group"></i>
+            </div>
+            <span class="text-lg font-bold text-white">شركة آفاق</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed mb-4">شريكك الموثوق في تقديم الاستشارات المهنية والحلول الرقمية لدفع عجلة نمو أعمالك نحو المستقبل.</p>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold text-white mb-4">روابط سريعة</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#about" class="hover:text-white transition">عن الشركة</a></li>
+            <li><a href="#services" class="hover:text-white transition">خدماتنا</a></li>
+            <li><a href="#projects" class="hover:text-white transition">أبرز المشاريع</a></li>
+            <li><a href="#testimonials" class="hover:text-white transition">آراء العملاء</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold text-white mb-4">خدماتنا</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#services" class="hover:text-white transition">استشارات إدارية</a></li>
+            <li><a href="#services" class="hover:text-white transition">تطوير الأنظمة والحلول</a></li>
+            <li><a href="#services" class="hover:text-white transition">الأمن السيبراني والسحابة</a></li>
+            <li><a href="#services" class="hover:text-white transition">التسويق الرقمي</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold text-white mb-4">النشرة البريدية</h4>
+          <p class="text-xs text-slate-400 mb-3">اشترك معنا ليصلك أحدث المقالات والتقارير الدورية في قطاع الأعمال.</p>
+          <div class="flex gap-2">
+            <input type="email" placeholder="بريدك الإلكتروني" class="bg-slate-800 border border-slate-700 text-xs px-3 py-2 rounded-lg text-white w-full focus:outline-none focus:border-corporate-500">
+            <button class="bg-corporate-600 hover:bg-corporate-700 text-white px-3 py-2 rounded-lg text-xs font-bold transition">اشتراك</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-800 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs gap-4">
+        <div>جميع الحقوق محفوظة © 2026 شركة آفاق للأعمال.</div>
+        <div class="flex gap-4">
+          <a href="#" class="hover:text-white transition">سياسة الخصوصية</a>
+          <a href="#" class="hover:text-white transition">الشروط والأحكام</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Simple Scripts -->
+  <script>
+    // Language Toggle
+    function toggleLanguage() {
+      const html = document.documentElement;
+      if (html.getAttribute('dir') === 'rtl') {
+        html.setAttribute('dir', 'ltr');
+        html.setAttribute('lang', 'en');
+      } else {
+        html.setAttribute('dir', 'rtl');
+        html.setAttribute('lang', 'ar');
+      }
+    }
+
+    // Mobile Menu Toggle
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
