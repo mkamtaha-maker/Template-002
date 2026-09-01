@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" class="scroll-smooth">
+<html lang="en" dir="ltr" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-i18n="page_title">شركة آفاق للحلول والاستشارات | ريادة الأعمال</title>
+  <title data-i18n="page_title">Vanguard Advisory | Corporate & Engineering Solutions</title>
   
-  <!-- خطوط Tajawal (عربي) و Plus Jakarta Sans (إنجليزي) -->
+  <!-- Fonts: Plus Jakarta Sans for English, Tajawal for Arabic -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
   
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -34,24 +33,22 @@
       }
     }
   </script>
-  
-  <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
-<body class="font-['Tajawal'] text-slate-700 bg-white antialiased transition-all duration-300" id="body-root">
+<body class="font-['Plus_Jakarta_Sans'] text-slate-700 bg-white antialiased transition-all duration-200" id="body-root">
 
   <!-- Top Bar -->
   <div class="bg-accent-900 text-slate-300 text-xs py-2.5 px-6 border-b border-slate-800">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
       <div class="flex items-center gap-6">
-        <span><i class="fa-solid fa-phone text-corporate-600 me-2"></i> +966 50 123 4567</span>
-        <span><i class="fa-solid fa-envelope text-corporate-600 me-2"></i> info@example.com</span>
+        <span><i class="fa-solid fa-phone text-corporate-600 me-2"></i> +44 161 000 0000</span>
+        <span><i class="fa-solid fa-envelope text-corporate-600 me-2"></i> contact@vanguard.co.uk</span>
       </div>
       <div class="flex items-center gap-4">
-        <span class="text-slate-400" data-i18n="top_hours">ساعات العمل: الأحد - الخميس 8:00 ص - 5:00 م</span>
+        <span class="text-slate-400" data-i18n="top_hours">Hours: Mon - Fri 8:30 AM - 5:30 PM</span>
         <button onclick="toggleLang()" class="text-white hover:text-corporate-600 font-bold ms-4 flex items-center gap-1.5 transition">
           <i class="fa-solid fa-globe text-corporate-600"></i>
-          <span id="lang-btn-text">English</span>
+          <span id="lang-btn-text">العربية</span>
         </button>
       </div>
     </div>
@@ -62,24 +59,24 @@
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <div class="flex items-center gap-3">
         <div class="w-11 h-11 bg-corporate-700 text-white rounded-lg flex items-center justify-center font-bold text-2xl shadow">
-          A
+          V
         </div>
         <div>
-          <span class="text-2xl font-bold text-accent-900 block leading-none" data-i18n="brand_name">آفاق الدولية</span>
-          <span class="text-[10px] tracking-widest text-corporate-700 uppercase font-bold" data-i18n="brand_subtitle">Solutions & Consulting</span>
+          <span class="text-2xl font-bold text-accent-900 block leading-none" data-i18n="brand_name">Vanguard Group</span>
+          <span class="text-[10px] tracking-widest text-corporate-700 uppercase font-bold" data-i18n="brand_subtitle">Advisory & Management</span>
         </div>
       </div>
 
       <nav class="hidden lg:flex items-center gap-8 text-sm font-bold text-slate-700">
-        <a href="#home" class="text-corporate-700 hover:text-corporate-800 transition" data-i18n="nav_home">الرئيسية</a>
-        <a href="#about" class="hover:text-corporate-700 transition" data-i18n="nav_about">من نحن</a>
-        <a href="#services" class="hover:text-corporate-700 transition" data-i18n="nav_services">خدماتنا</a>
-        <a href="#contact" class="hover:text-corporate-700 transition" data-i18n="nav_contact">تواصل معنا</a>
+        <a href="#home" class="text-corporate-700 hover:text-corporate-800 transition" data-i18n="nav_home">Home</a>
+        <a href="#about" class="hover:text-corporate-700 transition" data-i18n="nav_about">About</a>
+        <a href="#services" class="hover:text-corporate-700 transition" data-i18n="nav_services">Services</a>
+        <a href="#contact" class="hover:text-corporate-700 transition" data-i18n="nav_contact">Contact</a>
       </nav>
 
       <div>
         <a href="#contact" class="bg-corporate-700 hover:bg-corporate-800 text-white text-sm font-bold px-6 py-3 rounded-lg transition shadow" data-i18n="cta_consult">
-          طلب استشارة
+          Request Advisory
         </a>
       </div>
     </div>
@@ -91,26 +88,26 @@
     <div class="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
       <div>
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-corporate-900/60 border border-corporate-600 text-corporate-400 text-xs font-bold mb-6">
-          <i class="fa-solid fa-award"></i> <span data-i18n="hero_badge">شريكك الاستراتيجي في النمو المؤسسي</span>
+          <i class="fa-solid fa-award"></i> <span data-i18n="hero_badge">Your Strategic Partner in Enterprise Excellence</span>
         </div>
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6" data-i18n="hero_title">
-          نبني حلولاً ذكية تقود شركتك نحو المستقبل
+          Engineering Smart Solutions Driving Sustainable Growth
         </h1>
         <p class="text-lg text-slate-300 mb-8 leading-relaxed max-w-xl" data-i18n="hero_desc">
-          نقدم استشارات إدارية وحلول تقنية وتشغيلية متقدمة تهدف إلى تعظيم الأرباح وتحسين كفاءة العمليات التشغيلية للشركات والمؤسسات.
+          Delivering specialized operational consulting, digital workflow systems, and facility performance optimization to maximize business resilience.
         </p>
         <div class="flex flex-wrap gap-4">
           <a href="#contact" class="bg-corporate-600 hover:bg-corporate-700 text-white font-bold px-8 py-4 rounded-lg shadow-lg transition" data-i18n="hero_btn_primary">
-            احجز جلستك الآن
+            Book Consultation
           </a>
           <a href="#services" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold px-8 py-4 rounded-lg border border-slate-700 transition" data-i18n="hero_btn_secondary">
-            استكشف خدماتنا
+            Explore Services
           </a>
         </div>
       </div>
       <div class="hidden lg:block">
         <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-800">
-          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Building" class="w-full h-auto object-cover">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Corporate" class="w-full h-auto object-cover">
         </div>
       </div>
     </div>
@@ -121,23 +118,23 @@
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div>
-          <span class="text-corporate-700 font-bold uppercase tracking-wider text-sm" data-i18n="about_tag">نبذة عنا</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-accent-900 mt-2 mb-6 leading-tight" data-i18n="about_title">خبرة تتجاوز 15 عاماً في قيادة التحول والأعمال</h2>
+          <span class="text-corporate-700 font-bold uppercase tracking-wider text-sm" data-i18n="about_tag">About Our Firm</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-accent-900 mt-2 mb-6 leading-tight" data-i18n="about_title">Over 15 Years of Excellence in Operational Management</h2>
           <p class="text-slate-600 leading-relaxed mb-6" data-i18n="about_desc">
-            نحن مؤسسة متخصصة في تقديم الاستشارات والحلول المتكاملة. نعتمد على كفاءات هندسية وإدارية ذات خبرة واسعة في تحليل المشاكل وتقديم حلول قابلة للتنفيذ المستدام.
+            We partner with businesses to streamline governance, mitigate operational vulnerabilities, and deploy sustainable engineering practices tailored to distinct client objectives.
           </p>
           <div class="space-y-4 mb-8">
             <div class="flex items-start gap-3">
               <div class="w-6 h-6 rounded-full bg-corporate-100 text-corporate-700 flex items-center justify-center flex-shrink-0 mt-1">
                 <i class="fa-solid fa-check text-xs"></i>
               </div>
-              <p class="text-slate-700 font-medium" data-i18n="about_point_1">خطط استراتيجية مخصصة تناسب أهداف كل عميل بدقة.</p>
+              <p class="text-slate-700 font-medium" data-i18n="about_point_1">Data-backed strategic execution designed for long-term ROI.</p>
             </div>
             <div class="flex items-start gap-3">
               <div class="w-6 h-6 rounded-full bg-corporate-100 text-corporate-700 flex items-center justify-center flex-shrink-0 mt-1">
                 <i class="fa-solid fa-check text-xs"></i>
               </div>
-              <p class="text-slate-700 font-medium" data-i18n="about_point_2">أعلى معايير الحوكمة وإدارة المخاطر والامتثال المؤسسي.</p>
+              <p class="text-slate-700 font-medium" data-i18n="about_point_2">Industry-leading standards in risk management and operational compliance.</p>
             </div>
           </div>
         </div>
@@ -146,25 +143,25 @@
           <div class="space-y-4">
             <div class="p-6 bg-white rounded-xl shadow-sm border border-slate-200">
               <div class="text-3xl font-extrabold text-corporate-700 mb-2">+150</div>
-              <div class="text-sm font-bold text-slate-800" data-i18n="stat_1_title">مشروع ناجح</div>
-              <div class="text-xs text-slate-500 mt-1" data-i18n="stat_1_desc">تم تسليمه بأعلى جودة</div>
+              <div class="text-sm font-bold text-slate-800" data-i18n="stat_1_title">Projects Delivered</div>
+              <div class="text-xs text-slate-500 mt-1" data-i18n="stat_1_desc">With measurable ROI</div>
             </div>
             <div class="p-6 bg-white rounded-xl shadow-sm border border-slate-200">
               <div class="text-3xl font-extrabold text-corporate-700 mb-2">98%</div>
-              <div class="text-sm font-bold text-slate-800" data-i18n="stat_2_title">نسبة الرضا</div>
-              <div class="text-xs text-slate-500 mt-1" data-i18n="stat_2_desc">من شركائنا في المنطقة</div>
+              <div class="text-sm font-bold text-slate-800" data-i18n="stat_2_title">Client Satisfaction</div>
+              <div class="text-xs text-slate-500 mt-1" data-i18n="stat_2_desc">Long-term partnerships</div>
             </div>
           </div>
           <div class="space-y-4 mt-8">
             <div class="p-6 bg-corporate-700 text-white rounded-xl shadow-md">
               <div class="text-3xl font-extrabold mb-2">+25</div>
-              <div class="text-sm font-bold" data-i18n="stat_3_title">خبير ومستشار</div>
-              <div class="text-xs text-corporate-100 mt-1" data-i18n="stat_3_desc">فريق عمل متخصص</div>
+              <div class="text-sm font-bold" data-i18n="stat_3_title">Senior Advisors</div>
+              <div class="text-xs text-corporate-100 mt-1" data-i18n="stat_3_desc">Multidisciplinary team</div>
             </div>
             <div class="p-6 bg-white rounded-xl shadow-sm border border-slate-200">
               <div class="text-3xl font-extrabold text-corporate-700 mb-2">12+</div>
-              <div class="text-sm font-bold text-slate-800" data-i18n="stat_4_title">قطاع أعمال</div>
-              <div class="text-xs text-slate-500 mt-1" data-i18n="stat_4_desc">نغطي مختلف الصناعات</div>
+              <div class="text-sm font-bold text-slate-800" data-i18n="stat_4_title">Industry Verticals</div>
+              <div class="text-xs text-slate-500 mt-1" data-i18n="stat_4_desc">Broad sector reach</div>
             </div>
           </div>
         </div>
@@ -176,37 +173,34 @@
   <section id="services" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-corporate-700 font-bold uppercase tracking-wider text-sm" data-i18n="services_tag">خدماتنا المتميزة</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-accent-900 mt-2 mb-4" data-i18n="services_title">حلول شاملة مصممة لنمو أعمالك</h2>
-        <p class="text-slate-600" data-i18n="services_subtitle">نقدم باقة واسعة من الخدمات الاستشارية والتقنية لدعم وتطوير قطاع الأعمال.</p>
+        <span class="text-corporate-700 font-bold uppercase tracking-wider text-sm" data-i18n="services_tag">Our Services</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-accent-900 mt-2 mb-4" data-i18n="services_title">Tailored Solutions for Scalable Enterprises</h2>
+        <p class="text-slate-600" data-i18n="services_subtitle">Comprehensive corporate consultancy and engineering services built to optimize operations.</p>
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Service 1 -->
         <div class="p-8 rounded-xl border border-slate-200 hover:shadow-xl hover:border-corporate-600 transition duration-300 group">
           <div class="w-14 h-14 bg-corporate-50 text-corporate-700 rounded-lg flex items-center justify-center text-2xl mb-6 group-hover:bg-corporate-700 group-hover:text-white transition duration-300">
             <i class="fa-solid fa-briefcase"></i>
           </div>
-          <h3 class="text-xl font-bold text-accent-900 mb-3" data-i18n="srv_1_title">الاستشارات الإدارية والتشغيلية</h3>
-          <p class="text-slate-600 text-sm leading-relaxed" data-i18n="srv_1_desc">إعادة هيكلة العمليات التشغيلية، رفع كفاءة سلاسل الإمداد، وإدارة الأداء والموارد البشرية.</p>
+          <h3 class="text-xl font-bold text-accent-900 mb-3" data-i18n="srv_1_title">Operational Advisory</h3>
+          <p class="text-slate-600 text-sm leading-relaxed" data-i18n="srv_1_desc">Process restructuring, supply chain performance, and corporate governance frameworks.</p>
         </div>
 
-        <!-- Service 2 -->
         <div class="p-8 rounded-xl border border-slate-200 hover:shadow-xl hover:border-corporate-600 transition duration-300 group">
           <div class="w-14 h-14 bg-corporate-50 text-corporate-700 rounded-lg flex items-center justify-center text-2xl mb-6 group-hover:bg-corporate-700 group-hover:text-white transition duration-300">
             <i class="fa-solid fa-network-wired"></i>
           </div>
-          <h3 class="text-xl font-bold text-accent-900 mb-3" data-i18n="srv_2_title">التحول الرقمي والأتمتة</h3>
-          <p class="text-slate-600 text-sm leading-relaxed" data-i18n="srv_2_desc">بناء أنظمة مخصصة وربط البرمجيات بأحدث تقنيات السحابة والذكاء الاصطناعي لتسريع العمليات.</p>
+          <h3 class="text-xl font-bold text-accent-900 mb-3" data-i18n="srv_2_title">Digital Transformation & Automation</h3>
+          <p class="text-slate-600 text-sm leading-relaxed" data-i18n="srv_2_desc">Automated workflow pipelines, custom cloud architecture, and legacy system modernization.</p>
         </div>
 
-        <!-- Service 3 -->
         <div class="p-8 rounded-xl border border-slate-200 hover:shadow-xl hover:border-corporate-600 transition duration-300 group">
           <div class="w-14 h-14 bg-corporate-50 text-corporate-700 rounded-lg flex items-center justify-center text-2xl mb-6 group-hover:bg-corporate-700 group-hover:text-white transition duration-300">
             <i class="fa-solid fa-chart-pie"></i>
           </div>
-          <h3 class="text-xl font-bold text-accent-900 mb-3" data-i18n="srv_3_title">إدارة المشاريع والمرافق</h3>
-          <p class="text-slate-600 text-sm leading-relaxed" data-i18n="srv_3_desc">الإشراف الهندسي والإداري، صيانة المرافق، وضمان استدامة الأصول والمعدات بأقل تكلفة.</p>
+          <h3 class="text-xl font-bold text-accent-900 mb-3" data-i18n="srv_3_title">Facilities & Project Management</h3>
+          <p class="text-slate-600 text-sm leading-relaxed" data-i18n="srv_3_desc">Asset lifecycle optimization, regulatory compliance audits, and commercial facility management.</p>
         </div>
       </div>
     </div>
@@ -217,10 +211,10 @@
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid lg:grid-cols-2 gap-12">
         <div>
-          <span class="text-corporate-400 font-bold uppercase tracking-wider text-sm" data-i18n="contact_tag">تواصل معنا</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold mt-2 mb-6" data-i18n="contact_title">جاهز لبدء مرحلة جديدة من النجاح؟</h2>
+          <span class="text-corporate-400 font-bold uppercase tracking-wider text-sm" data-i18n="contact_tag">Get in Touch</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold mt-2 mb-6" data-i18n="contact_title">Ready to Elevate Your Organization?</h2>
           <p class="text-slate-300 mb-8 leading-relaxed" data-i18n="contact_desc">
-            فريق خبرائنا جاهز لمناقشة متطلبات مشروعك وتقديم العروض الفنية والمالية المناسبة.
+            Our multi-disciplinary team is standing by to evaluate your scope and build a tailored action plan.
           </p>
           <div class="space-y-6">
             <div class="flex items-center gap-4">
@@ -228,8 +222,8 @@
                 <i class="fa-solid fa-location-dot"></i>
               </div>
               <div>
-                <h4 class="font-bold text-white" data-i18n="info_hq">المقر الرئيسي</h4>
-                <p class="text-slate-400 text-sm" data-i18n="info_address">طريق الملك فهد، حي الصحافة، الرياض</p>
+                <h4 class="font-bold text-white" data-i18n="info_hq">Head Office</h4>
+                <p class="text-slate-400 text-sm" data-i18n="info_address">120 Business Park Ave, Manchester, UK</p>
               </div>
             </div>
             <div class="flex items-center gap-4">
@@ -237,38 +231,38 @@
                 <i class="fa-solid fa-phone"></i>
               </div>
               <div>
-                <h4 class="font-bold text-white" data-i18n="info_phone">الهاتف</h4>
-                <p class="text-slate-400 text-sm" dir="ltr">+966 11 000 0000</p>
+                <h4 class="font-bold text-white" data-i18n="info_phone">Phone</h4>
+                <p class="text-slate-400 text-sm">+44 161 000 0000</p>
               </div>
             </div>
           </div>
         </div>
 
         <div class="bg-white text-slate-800 p-8 rounded-2xl shadow-xl">
-          <h3 class="text-2xl font-bold mb-6 text-accent-900" data-i18n="form_title">أرسل استفسارك</h3>
-          <form class="space-y-4" onsubmit="event.preventDefault(); alert(currentLang === 'ar' ? 'تم إرسال الرسالة بنجاح' : 'Message sent successfully');">
+          <h3 class="text-2xl font-bold mb-6 text-accent-900" data-i18n="form_title">Send an Inquiry</h3>
+          <form class="space-y-4" onsubmit="event.preventDefault(); alert(currentLang === 'en' ? 'Inquiry submitted successfully.' : 'تم إرسال الطلب بنجاح.');">
             <div>
-              <label class="block text-xs font-bold text-slate-600 mb-1" data-i18n="form_name_lbl">الاسم الكامل</label>
-              <input type="text" id="input_name" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:border-corporate-600 text-sm" placeholder="مثال: محمد عبدالله">
+              <label class="block text-xs font-bold text-slate-600 mb-1" data-i18n="form_name_lbl">Full Name</label>
+              <input type="text" id="input_name" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:border-corporate-600 text-sm" placeholder="e.g. John Doe">
             </div>
             <div>
-              <label class="block text-xs font-bold text-slate-600 mb-1" data-i18n="form_email_lbl">البريد الإلكتروني</label>
+              <label class="block text-xs font-bold text-slate-600 mb-1" data-i18n="form_email_lbl">Business Email</label>
               <input type="email" id="input_email" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:border-corporate-600 text-sm" placeholder="name@company.com">
             </div>
             <div>
-              <label class="block text-xs font-bold text-slate-600 mb-1" data-i18n="form_srv_lbl">الخدمة المطلوبة</label>
-              <select class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:border-corporate-600 text-sm" id="select_service">
-                <option value="1" data-i18n="opt_1">استشارات إدارية</option>
-                <option value="2" data-i18n="opt_2">تحول رقمي وأتمتة</option>
-                <option value="3" data-i18n="opt_3">إدارة مرافق ومشاريع</option>
+              <label class="block text-xs font-bold text-slate-600 mb-1" data-i18n="form_srv_lbl">Service Scope</label>
+              <select class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:border-corporate-600 text-sm">
+                <option data-i18n="opt_1">Operational Advisory</option>
+                <option data-i18n="opt_2">Digital Transformation</option>
+                <option data-i18n="opt_3">Facilities & Project Management</option>
               </select>
             </div>
             <div>
-              <label class="block text-xs font-bold text-slate-600 mb-1" data-i18n="form_msg_lbl">تفاصيل الرسالة</label>
-              <textarea rows="3" id="input_msg" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:border-corporate-600 text-sm" placeholder="اكتب تفاصيل طلبك هنا..."></textarea>
+              <label class="block text-xs font-bold text-slate-600 mb-1" data-i18n="form_msg_lbl">Message</label>
+              <textarea rows="3" id="input_msg" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:border-corporate-600 text-sm" placeholder="Tell us about your project requirements..."></textarea>
             </div>
             <button type="submit" class="w-full bg-corporate-700 hover:bg-corporate-800 text-white font-bold py-3.5 rounded-lg transition shadow-md" data-i18n="form_submit">
-              إرسال الطلب
+              Submit Request
             </button>
           </form>
         </div>
@@ -279,7 +273,7 @@
   <!-- Footer -->
   <footer class="bg-accent-900 text-slate-400 py-8 border-t border-slate-800 text-xs">
     <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div data-i18n="footer_rights">جميع الحقوق محفوظة © 2026 شركة آفاق للحلول.</div>
+      <div data-i18n="footer_rights">All rights reserved © 2026 Vanguard Group.</div>
       <div class="flex gap-4">
         <a href="#" class="hover:text-white"><i class="fa-brands fa-linkedin text-base"></i></a>
         <a href="#" class="hover:text-white"><i class="fa-brands fa-x-twitter text-base"></i></a>
@@ -287,46 +281,103 @@
     </div>
   </footer>
 
-  <!-- Translation Dictionary & Switcher Script -->
   <script>
     const translations = {
+      en: {
+        page_title: "Vanguard Advisory | Corporate & Engineering Solutions",
+        top_hours: "Hours: Mon - Fri 8:30 AM - 5:30 PM",
+        brand_name: "Vanguard Group",
+        brand_subtitle: "Advisory & Management",
+        nav_home: "Home",
+        nav_about: "About",
+        nav_services: "Services",
+        nav_contact: "Contact",
+        cta_consult: "Request Advisory",
+        hero_badge: "Your Strategic Partner in Enterprise Excellence",
+        hero_title: "Engineering Smart Solutions Driving Sustainable Growth",
+        hero_desc: "Delivering specialized operational consulting, digital workflow systems, and facility performance optimization to maximize business resilience.",
+        hero_btn_primary: "Book Consultation",
+        hero_btn_secondary: "Explore Services",
+        about_tag: "About Our Firm",
+        about_title: "Over 15 Years of Excellence in Operational Management",
+        about_desc: "We partner with businesses to streamline governance, mitigate operational vulnerabilities, and deploy sustainable engineering practices tailored to distinct client objectives.",
+        about_point_1: "Data-backed strategic execution designed for long-term ROI.",
+        about_point_2: "Industry-leading standards in risk management and operational compliance.",
+        stat_1_title: "Projects Delivered",
+        stat_1_desc: "With measurable ROI",
+        stat_2_title: "Client Satisfaction",
+        stat_2_desc: "Long-term partnerships",
+        stat_3_title: "Senior Advisors",
+        stat_3_desc: "Multidisciplinary team",
+        stat_4_title: "Industry Verticals",
+        stat_4_desc: "Broad sector reach",
+        services_tag: "Our Services",
+        services_title: "Tailored Solutions for Scalable Enterprises",
+        services_subtitle: "Comprehensive corporate consultancy and engineering services built to optimize operations.",
+        srv_1_title: "Operational Advisory",
+        srv_1_desc: "Process restructuring, supply chain performance, and corporate governance frameworks.",
+        srv_2_title: "Digital Transformation & Automation",
+        srv_2_desc: "Automated workflow pipelines, custom cloud architecture, and legacy system modernization.",
+        srv_3_title: "Facilities & Project Management",
+        srv_3_desc: "Asset lifecycle optimization, regulatory compliance audits, and commercial facility management.",
+        contact_tag: "Get in Touch",
+        contact_title: "Ready to Elevate Your Organization?",
+        contact_desc: "Our multi-disciplinary team is standing by to evaluate your scope and build a tailored action plan.",
+        info_hq: "Head Office",
+        info_address: "120 Business Park Ave, Manchester, UK",
+        info_phone: "Phone",
+        form_title: "Send an Inquiry",
+        form_name_lbl: "Full Name",
+        form_email_lbl: "Business Email",
+        form_srv_lbl: "Service Scope",
+        opt_1: "Operational Advisory",
+        opt_2: "Digital Transformation",
+        opt_3: "Facilities & Project Management",
+        form_msg_lbl: "Message",
+        form_submit: "Submit Request",
+        footer_rights: "All rights reserved © 2026 Vanguard Group.",
+        lang_btn: "العربية",
+        ph_name: "e.g. John Doe",
+        ph_email: "name@company.com",
+        ph_msg: "Tell us about your project requirements..."
+      },
       ar: {
-        page_title: "شركة آفاق للحلول والاستشارات | ريادة الأعمال",
-        top_hours: "ساعات العمل: الأحد - الخميس 8:00 ص - 5:00 م",
-        brand_name: "آفاق الدولية",
-        brand_subtitle: "Solutions & Consulting",
+        page_title: "مجموعة فانغارد | حلول واستشارات الشركات",
+        top_hours: "ساعات العمل: الأحد - الخميس 8:30 ص - 5:30 م",
+        brand_name: "مجموعة فانغارد",
+        brand_subtitle: "الاستشارات والإدارة",
         nav_home: "الرئيسية",
         nav_about: "من نحن",
         nav_services: "خدماتنا",
         nav_contact: "تواصل معنا",
         cta_consult: "طلب استشارة",
-        hero_badge: "شريكك الاستراتيجي في النمو المؤسسي",
+        hero_badge: "شريكك الاستراتيجي في النمو المؤسسي والتميز",
         hero_title: "نبني حلولاً ذكية تقود شركتك نحو المستقبل",
-        hero_desc: "نقدم استشارات إدارية وحلول تقنية وتشغيلية متقدمة تهدف إلى تعظيم الأرباح وتحسين كفاءة العمليات التشغيلية للشركات والمؤسسات.",
+        hero_desc: "نقدم استشارات إدارية وتشغيلية متخصصة وأنظمة أتمتة متقدمة تهدف إلى تعظيم الأرباح ورفع كفاءة المنشآت والأعمال.",
         hero_btn_primary: "احجز جلستك الآن",
         hero_btn_secondary: "استكشف خدماتنا",
         about_tag: "نبذة عنا",
         about_title: "خبرة تتجاوز 15 عاماً في قيادة التحول والأعمال",
-        about_desc: "نحن مؤسسة متخصصة في تقديم الاستشارات والحلول المتكاملة. نعتمد على كفاءات هندسية وإدارية ذات خبرة واسعة في تحليل المشاكل وتقديم حلول قابلة للتنفيذ المستدام.",
-        about_point_1: "خطط استراتيجية مخصصة تناسب أهداف كل عميل بدقة.",
+        about_desc: "نحن مؤسسة متخصصة في تقديم الاستشارات والحلول المتكاملة لدعم حوكمة العمليات وتحسين الأداء التشغيلي والاستدامة.",
+        about_point_1: "خطط استراتيجية مدعومة بالبيانات لضمان عائد استثماري مستدام.",
         about_point_2: "أعلى معايير الحوكمة وإدارة المخاطر والامتثال المؤسسي.",
         stat_1_title: "مشروع ناجح",
         stat_1_desc: "تم تسليمه بأعلى جودة",
         stat_2_title: "نسبة الرضا",
-        stat_2_desc: "من شركائنا في المنطقة",
+        stat_2_desc: "شراكات طويلة الأمد",
         stat_3_title: "خبير ومستشار",
-        stat_3_desc: "فريق عمل متخصص",
+        stat_3_desc: "فريق عمل متعدد التخصصات",
         stat_4_title: "قطاع أعمال",
-        stat_4_desc: "نغطي مختلف الصناعات",
+        stat_4_desc: "تغطية شاملة لمختلف الصناعات",
         services_tag: "خدماتنا المتميزة",
         services_title: "حلول شاملة مصممة لنمو أعمالك",
-        services_subtitle: "نقدم باقة واسعة من الخدمات الاستشارية والتقنية لدعم وتطوير قطاع الأعمال.",
+        services_subtitle: "نقدم باقة واسعة من الخدمات الاستشارية والهندسية لدعم وتطوير قطاع الأعمال.",
         srv_1_title: "الاستشارات الإدارية والتشغيلية",
-        srv_1_desc: "إعادة هيكلة العمليات التشغيلية، رفع كفاءة سلاسل الإمداد، وإدارة الأداء والموارد البشرية.",
+        srv_1_desc: "إعادة هيكلة العمليات، كفاءة سلاسل الإمداد، وإدارة الأداء والحوكمة المؤسسية.",
         srv_2_title: "التحول الرقمي والأتمتة",
-        srv_2_desc: "بناء أنظمة مخصصة وربط البرمجيات بأحدث تقنيات السحابة والذكاء الاصطناعي لتسريع العمليات.",
+        srv_2_desc: "بناء مسارات عمل مؤتمتة وتطوير البرمجيات السحابية لتسريع الإنتاجية.",
         srv_3_title: "إدارة المشاريع والمرافق",
-        srv_3_desc: "الإشراف الهندسي والإداري، صيانة المرافق، وضمان استدامة الأصول والمعدات بأقل تكلفة.",
+        srv_3_desc: "الإشراف الهندسي والإداري، صيانة المرافق، وضمان استدامة الأصول بأقل تكلفة.",
         contact_tag: "تواصل معنا",
         contact_title: "جاهز لبدء مرحلة جديدة من النجاح؟",
         contact_desc: "فريق خبرائنا جاهز لمناقشة متطلبات مشروعك وتقديم العروض الفنية والمالية المناسبة.",
@@ -336,113 +387,54 @@
         form_title: "أرسل استفسارك",
         form_name_lbl: "الاسم الكامل",
         form_email_lbl: "البريد الإلكتروني",
-        form_srv_lbl: "الخدمة المطلوبة",
+        form_srv_lbl: "مجال الخدمة",
         opt_1: "استشارات إدارية",
         opt_2: "تحول رقمي وأتمتة",
         opt_3: "إدارة مرافق ومشاريع",
         form_msg_lbl: "تفاصيل الرسالة",
         form_submit: "إرسال الطلب",
-        footer_rights: "جميع الحقوق محفوظة © 2026 شركة آفاق للحلول.",
+        footer_rights: "جميع الحقوق محفوظة © 2026 مجموعة فانغارد.",
         lang_btn: "English",
         ph_name: "مثال: محمد عبدالله",
         ph_email: "name@company.com",
-        ph_msg: "اكتب تفاصيل طلبك هنا..."
-      },
-      en: {
-        page_title: "Afaq Solutions & Consulting | Business Excellence",
-        top_hours: "Business Hours: Sun - Thu 8:00 AM - 5:00 PM",
-        brand_name: "Afaq Global",
-        brand_subtitle: "Solutions & Consulting",
-        nav_home: "Home",
-        nav_about: "About Us",
-        nav_services: "Services",
-        nav_contact: "Contact",
-        cta_consult: "Request Consultation",
-        hero_badge: "Your Strategic Partner in Growth",
-        hero_title: "Building Smart Solutions Driving Your Future",
-        hero_desc: "Delivering advanced management consulting and technological solutions to optimize operations and maximize enterprise profitability.",
-        hero_btn_primary: "Book a Session",
-        hero_btn_secondary: "Explore Services",
-        about_tag: "About Us",
-        about_title: "Over 15 Years Leading Business Transformation",
-        about_desc: "We specialize in comprehensive consulting and integrated solutions, leveraging engineering and operational expertise to drive sustainable value.",
-        about_point_1: "Tailored strategic frameworks aligned with specific client goals.",
-        about_point_2: "Highest standards of corporate governance, compliance, and risk mitigation.",
-        stat_1_title: "Completed Projects",
-        stat_1_desc: "Delivered with excellence",
-        stat_2_title: "Client Satisfaction",
-        stat_2_desc: "Across regional partners",
-        stat_3_title: "Senior Experts",
-        stat_3_desc: "Specialized multidisciplinary team",
-        stat_4_title: "Industry Sectors",
-        stat_4_desc: "Serving diversified verticals",
-        services_tag: "Our Services",
-        services_title: "Comprehensive Solutions for Scalable Growth",
-        services_subtitle: "A complete suite of managerial and digital solutions engineered for enterprise evolution.",
-        srv_1_title: "Management & Operational Advisory",
-        srv_1_desc: "Process re-engineering, supply chain optimization, and executive workforce development.",
-        srv_2_title: "Digital Transformation & Automation",
-        srv_2_desc: "Custom cloud integrations and AI-driven workflow automations to accelerate delivery.",
-        srv_3_title: "Project & Facilities Management",
-        srv_3_desc: "Asset reliability engineering, maintenance operations, and lifecycle cost optimization.",
-        contact_tag: "Contact Us",
-        contact_title: "Ready to Scale Your Business to New Heights?",
-        contact_desc: "Our consulting team is ready to evaluate your requirements and structure competitive proposals.",
-        info_hq: "Headquarters",
-        info_address: "King Fahd Road, Al-Sahafa Dist, Riyadh",
-        info_phone: "Phone",
-        form_title: "Send an Inquiry",
-        form_name_lbl: "Full Name",
-        form_email_lbl: "Business Email",
-        form_srv_lbl: "Requested Service",
-        opt_1: "Management Advisory",
-        opt_2: "Digital Transformation",
-        opt_3: "Facilities & Project Management",
-        form_msg_lbl: "Message Details",
-        form_submit: "Submit Request",
-        footer_rights: "All rights reserved © 2026 Afaq Solutions.",
-        lang_btn: "العربية",
-        ph_name: "e.g. John Doe",
-        ph_email: "name@company.com",
-        ph_msg: "Provide your project scope or inquiries here..."
+        ph_msg: "اكتب متطلبات مشروعك هنا..."
       }
     };
 
-    let currentLang = 'ar';
+    let currentLang = 'en';
 
     function toggleLang() {
-      currentLang = currentLang === 'ar' ? 'en' : 'ar';
+      currentLang = currentLang === 'en' ? 'ar' : 'en';
       
       const html = document.documentElement;
       const body = document.getElementById('body-root');
       const langBtnText = document.getElementById('lang-btn-text');
 
-      // 1. تبديل الاتجاه والخط
-      if (currentLang === 'en') {
-        html.setAttribute('dir', 'ltr');
-        html.setAttribute('lang', 'en');
-        body.className = body.className.replace("font-['Tajawal']", "font-['Plus_Jakarta_Sans']");
-      } else {
+      if (currentLang === 'ar') {
         html.setAttribute('dir', 'rtl');
         html.setAttribute('lang', 'ar');
         body.className = body.className.replace("font-['Plus_Jakarta_Sans']", "font-['Tajawal']");
+      } else {
+        html.setAttribute('dir', 'ltr');
+        html.setAttribute('lang', 'en');
+        body.className = body.className.replace("font-['Tajawal']", "font-['Plus_Jakarta_Sans']");
       }
 
-      // 2. تحديث نص الزر
       langBtnText.innerText = translations[currentLang].lang_btn;
 
-      // 3. تحديث كافة عناصر النصوص
-      document.querySelectorAll('[data-i18n]').forEach(element => {
-        const key = element.getAttribute('data-i18n');
-        if (translations[currentLang][key]) {
-          element.innerText = translations[currentLang][key];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[currentLang] && translations[currentLang][key]) {
+          el.innerText = translations[currentLang][key];
         }
       });
 
-      // 4. تحديث النصوص التوضيحية للحقول (Placeholders)
-      document.getElementById('input_name').placeholder = translations[currentLang].ph_name;
-      document.getElementById('input_email').placeholder = translations[currentLang].ph_email;
-      document.getElementById('input_msg').placeholder = translations[currentLang].ph_msg;
+      const nameInput = document.getElementById('input_name');
+      const emailInput = document.getElementById('input_email');
+      const msgInput = document.getElementById('input_msg');
+      if (nameInput) nameInput.placeholder = translations[currentLang].ph_name;
+      if (emailInput) emailInput.placeholder = translations[currentLang].ph_email;
+      if (msgInput) msgInput.placeholder = translations[currentLang].ph_msg;
     }
   </script>
 </body>
